@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="comment-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, beatae. Harum, eaque. Atque, minima! Officia aspernatur esse, natus enim sequi eius quas! Id incidunt magni aspernatur illo dignissimos numquam pariatur voluptatibus deleniti inventore veniam qui eos recusandae consequuntur fuga, velit quasi, amet itaque nobis est nostrum unde! Veritatis, magni dolor.</p>
+        <p>Repellat nesciunt error quidem cum amet porro corrupti quod facilis itaque commodi officia distinctio ex ut, omnis sunt nobis dolores nam sequi quis libero iste dolore nisi perferendis? Consequuntur nobis voluptatibus fugiat non enim quasi cumque iusto ipsum, modi esse exercitationem a accusantium, odit eveniet minus dolores ullam voluptates quis!</p>
+        <p>A nihil minima quibusdam praesentium alias deleniti molestias minus in iusto, consectetur placeat quae, consequatur eaque exercitationem velit commodi enim totam! Laboriosam cumque voluptate exercitationem consequatur sapiente officia, illo amet! Cumque, nobis praesentium ipsa tempora accusamus mollitia quae doloremque facere quos doloribus magni suscipit accusantium veritatis. Eveniet repudiandae optio maiores?</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="6"></textarea>
+    </div>
+    <button id="btn-post">Drop comment</button>
+
+    <!-- js -->
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const newComment = document.getElementById('new-comment');
+            const commentBox = document.getElementById('comment-box');
+            const pElement = document.createElement('p');
+            pElement.innerText = newComment?.value;
+            commentBox.appendChild(pElement);
+            // console.log(newComment);
+            newComment.value = '';
+        });
+    </script>
+</body>
+</html>
